@@ -8,11 +8,8 @@ O frontend da aplicação foi desenvolvido com HTML, CSS e JavaScript .
 Design das Telas - Figma:
 https://www.figma.com/design/e4zUrLop7pi8WiC0qGBhKF/CRM?node-id=1-3&p=f&t=idawgjGfqI4IvQKJ-0
 
-Design System:
-Link para o PDF
-
 Site em Produção - GitHub Pages
-https://utfpr-gp.github.io/roubank-css/
+https://olivertchai.github.io/Roster-CRM/
 
 Framework CSS
 Bootstrap
