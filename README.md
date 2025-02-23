@@ -1,3 +1,5 @@
+OS ARQUIVOS FICARAM NA BRANCH MASTER
+
 #Roster-CRM
 Autor: Wagner Camargo Oliveira
 Este projeto tem como objetivo implementar um controle de clientes que seram separados em campanhas personalizadas para envio de mensagens .
