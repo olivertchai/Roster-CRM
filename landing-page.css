@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #314b5a;
+  flex-direction: row;
+}
+
+.menu .logo {
+  display: inline-flex;
+  height: clamp(2rem,4rem,6rem);
+  float: left;
+  margin-right: auto;
+  clip-path: inset(2% 2% 2% 3%);
+
+}
+
+.menu li {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  padding: 2rem 3rem;
+}
+.menu :first-child {
+  margin-right: auto;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+dialog::backdrop{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+dialog{
+  border-radius: 10px;
+  position: fixed;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+
+.header {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 2em;
+  color: black;
+}
+
+section {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 2em;
+}
+
+.main_history {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 1rem 2rem 1rem;
+  box-shadow: 05px 15px rgba(0, 0, 0, 0.35);
+  border-style: solid;
+}
+
+.main_about_us {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 1rem 2rem 1rem;
+  border-style: solid;
+  box-shadow: 05px 15px rgba(0, 0, 0, 0.35);
+}
+
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3 1fr);
+  align-items: center;
+  justify-items: center;
+  background-color: #314b5a;
+  height: 100px;
+  font-size: 14px;
+  height: 100%;
+  width: 100%;
+  line-height: 200%;
+}
+
+.footer dt {
+  font-size: 20px;
+}
+
+.footer .first_column {
+  grid-column-start: 1;
+}
+
+.first_column a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.second_column {
+  grid-column-start: 2;
+  color: #fff;
+}
+
+.second_column a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.third_column {
+  grid-column-start: 3;
+}
+
+footer .third_column img {
+  margin: 2em;
+  height: 10vh;
+  clip-path: inset(2% 2% 2% 3%);
+}

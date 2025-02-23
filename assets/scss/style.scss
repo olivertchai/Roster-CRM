@@ -1,0 +1,10 @@
+// Importa as variáveis do Bootstrap
+@import "variables";
+
+// Personalizações (opcional)
+$primary: #ff6347; // Altera a cor primária para vermelho-tomate
+
+// Seus próprios estilos
+body {
+  background-color: $primary;
+}

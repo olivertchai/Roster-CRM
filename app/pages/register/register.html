@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casdastre-se</title>
+
+    <link rel="stylesheet" href="/app/pages/register/register.css">
+
+    <!--link do css e js do BTS-->
+    <link rel="stylesheet" href="/assets/scss/bootstrap.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--link do CSS compilado do SASS-->
+    <link rel="stylesheet" href="/app/pages/style.css">
+
+    <!--link do AlertFy css-->
+    <link rel="stylesheet" href="/node_modules/alertifyjs/build/css/alertify.css">
+    <link rel="stylesheet" href="/node_modules/alertifyjs/build/css/themes/default.css">
+
+    <!--link do Animated CSS-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+    <div class=" col-12 col-sm-6 col-lg-6 container-fluid text-center mt-5 ">
+        <div class="card row justify-content-center align-items-center m-5 p-4 text-center  ">
+            <div class="mt-4 mb-1  w-100" id="head">
+                <h1 class="fw-700">Casdastre-se</h1>
+                <h2 class="p">Roster</h2>
+                <div class="text-center ">
+                    <img
+                        class="scaled-image img-fluid"
+                        src="/assets/img/logo.png"
+                        alt="logo"
+                    />
+                </div>
+            </div>
+
+            <form id="report-form" class="text-start p-3 novalidate">
+
+            <!-- Campo de Nome -->
+            <div class="mb-3">
+                <label for="input-name" class="form-label">Nome</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="input-name"
+                    placeholder="Digite seu nome"
+                    required
+                    pattern="[a-z|A-Z\s]+$"
+                />
+                <span class="error-text" id="name-error"
+                    >Por favor, insira um nome válido.</span
+                >
+            </div>
+
+            <!-- Campo de E-mail -->
+            <div class="mb-3">
+                <label for="input-email" class="form-label">E-mail</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="input-email"
+                  placeholder="Digite seu e-mail"
+                  required
+                  pattern="\w+@\w+\.\w+(\.\w{2})?"
+                />
+            </div>
+
+            <!-- Campo de Senha -->
+            <div class="mb-3">
+                <label for="input-senha" class="form-label">Senha</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="input-senha"
+                  placeholder="Digite sua senha"
+                  required
+                  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])(?:([0-9a-zA-Z$*&@#])(?!\1)){8,}$"
+                />
+            </div>
+
+            <!-- Campo de Telefone -->
+            <div class="mb-3">
+                <label for="input-telefone" class="form-label">Telefone</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="input-telefone"
+                  placeholder="(XX) XXXXX-XXXX"
+                  required
+                  data-mask="(00) 0000-0000"
+                  pattern="^\([1-9]{2}\) (?:[2-8]|9[0-9])[0-9]{3}\-[0-9]{4}$"
+                />
+            </div>
+
+            <!-- Campo de CPF -->
+            <div class="mb-3">
+                <label for="input-cpf" class="form-label">CPF</label>
+                <input
+                type="text"
+                class="form-control"
+                id="input-cpf"
+                placeholder="XXX.XXX.XXX-XX"
+                required
+                data-mask="000.000.000-00"
+                pattern="^\d{3}\.\d{3}\.\d{3}-?\d{2}$"
+                />
+            </div>
+              
+            <!-- Checkbox para Aceitar Termos -->
+            <div class="mb-3 form-check">
+                <input
+                type="checkbox"
+                class="form-check-input"
+                id="terms-checkbox"
+                required
+                />
+                <label class="form-check-label" for="terms-checkbox"
+                >Aceito os termos de compromisso</label
+                >
+            </div>
+              
+            <!-- Botões -->
+            <div class="col s12 right-align">
+                <button type="submit" class="rounded-3 btn btn-primary">
+                Cadastrar
+                </button>
+                <button type="reset" class="rounded-3 btn btn-secondary">
+                Limpar
+                </button>
+            </div>
+            </form>
+        </div> <!--Div do card-->
+    </div> <!--Div do container-->
+
+    <!-- Balao de cadastrado com sucesso -->
+    <div class="animate_animated " id="success-alert" style="display: none;">
+      <p>Cadastro realizado com sucesso!</p>
+    </div>
+
+        <!-- Dropdown para exibir os resultados -->
+        <div class="container mt-5">
+          <div class="card shadow-lg">
+            <div class="card-body">
+              <h5 class="card-title">Dados Cadastrados</h5>
+              <p class="card-text">
+                Clique no botão abaixo para ver os dados cadastrados.
+              </p>
+              <!-- Botão Dropdown -->
+              <div class="dropdown">
+                <button
+                  class="btn btn-primary dropdown-toggle w-100"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Ver Dados
+                </button>
+                <ul
+                  class="dropdown-menu w-100 "
+                  aria-labelledby="dropdownMenuButton"
+                  id="dropdown-items"
+                >
+                  <!-- Os dados serão adicionados aqui dinamicamente -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <script src="/node_modules/alertifyjs/src/js/alertify.js"></script>
+    <script src="/app/pages/register/register.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
